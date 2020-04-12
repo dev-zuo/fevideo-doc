@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="send-get-script">使用script发送get请求</button>
+  <script>
+    let sendGetRequestByScript = document.getElementById('send-get-script')
+    sendGetRequestByScript.onclick = async () => {
+      let script = document.createElement('script');
+      script.type="text/javascript" 
+      // script.src = "http://127.0.0.1:9000/users"
+      script.src = "http://127.0.0.1:9000/jsonpTest?callback=handleRes"
+      document.body.appendChild(script)
+      setTimeout(() => {
+        document.body.removeChild(script)
+      }, 2000)
+    }
+    // 这里可以接收到对应的数据
+    function handleRes(response) {
+      console.log('利用jsonp接收到的响应数据', response)
+    }
+  </script>
+</body>
+</html>

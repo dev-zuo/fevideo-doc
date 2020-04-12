@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="send-get-request">发送get请求</button>
+  <button id="send-post-request">发送post请求</button>
+  <script src="axios.min.js"></script>
+  <script>
+    let sendGetRequest = document.getElementById('send-get-request')
+    let sendPostRequest = document.getElementById('send-post-request')
+    sendGetRequest.onclick = async () => {
+      try {
+        let res = await axios.get('http://127.0.0.1:7000/users')
+        console.log(res)
+      } catch(e) {
+        console.error(e)
+      }
+    }
+    sendPostRequest.onclick = async () => {
+      try {
+        let payload = { x: 1, y: 1}
+        let res = await axios.post('http://127.0.0.1:7000/info', payload)
+        console.log(res)
+      } catch(e) {
+        console.error(e)
+      }
+    }
+  </script>
+</body>
+</html>

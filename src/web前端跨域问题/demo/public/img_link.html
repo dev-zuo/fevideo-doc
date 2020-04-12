@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link href="http://127.0.0.1:9000/users" rel="stylesheet"></link> -->
+</head>
+
+<body>
+  <button id="send-get-img">使用img发送get请求</button>
+  <button id="send-get-link">利用link发送get请求</button>
+  <script src="axios.min.js"></script>
+  <script>
+    let sendGetRequestByImg = document.getElementById('send-get-img')
+    let sendGetRequestByLink = document.getElementById('send-get-link')
+    sendGetRequestByImg.onclick = async () => {
+      let img = document.createElement('img')
+      img.src = 'http://127.0.0.1:9000/users?a=1&b=2'
+      img.style.display = 'none'
+      document.body.appendChild(img)
+      setTimeout(() => {
+        document.body.removeChild(img)
+      }, 2000)
+    }
+    sendGetRequestByLink.onclick = async () => {
+      let link = document.createElement('link')
+      link.href = 'http://127.0.0.1:9000/users'
+      link.rel = 'stylesheet'
+      document.head.appendChild(link)
+      setTimeout(() => {
+        document.head.removeChild(link)
+      }, 2000)
+    }
+  </script>
+</body>
+
+</html>
