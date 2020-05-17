@@ -1,5 +1,6 @@
 # fevideo-doc
-自制前端视频相关文字版、demo，主要用于记录前端学习过程，锻炼自己的表述能力，看能否把前端的某个技术点描述清楚。如果碰巧可以帮到其他人更好的理解前端相关知识点，那就更好了。
+
+The document or demo about FE videos which published at bilibili
 
 ## 历史内容
 
