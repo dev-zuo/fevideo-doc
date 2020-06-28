@@ -1,7 +1,8 @@
 # fevideo-doc
-自制前端视频相关文字版、demo，主要用于记录前端学习过程，锻炼自己的表述能力，看能否把前端的某个技术点描述清楚。如果碰巧可以帮到其他人更好的理解前端相关知识点，那就更好了。
 
-## 历史内容
+The document or demo about FE videos which published at bilibili
+
+## History
 
 - 2020/04/12 利用koa来彻底理解web前端跨域问题 [B站视频链接](https://www.bilibili.com/video/BV1G54y197oK) [资料链接](src/web前端跨域问题)
 
